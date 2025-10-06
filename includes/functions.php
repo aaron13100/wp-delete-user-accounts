@@ -24,5 +24,5 @@ function wp_delete_user_account_delete_button( $button_text = '' ) {
 	}
 
 	// Button
-	printf( '<button id="delete-my-account">%s</button>', $button_text );
+	printf( '<button id="delete-my-account">%s</button>', wp_kses_post( $button_text ) );
 }
